@@ -1,19 +1,11 @@
-h1 {
-  font-weight: 700;
-  text-align: center;
-  margin: 10px;
-  margin-bottom: 25px;
-}
-
 input {
   width: 100%;
 }
 
-.item-container {
-  text-align: left;
+.kg-button {
+  min-width: 80px;
 }
 
-.todo-btn {
-  margin: 10px;
-  min-width: 80px;
+.kg-row {
+  margin: 10px 5px;
 }
