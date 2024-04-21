@@ -8,12 +8,17 @@ import styles from "./App.module.css";
 function App() {
   let items = ["Fruits", "Vegetables", "Meat", "Dairy", "Grains"];
   return (
-    <Container>
-      <h1 className={styles.heading}>Food Items</h1>
-      <FoodInput></FoodInput>
-      <FoodItems items={items} />
-      <ErrorMessage items={items} />
-    </Container>
+    <>
+      <Container>
+        <h1 className={styles.heading}>Food Items</h1>
+        <FoodInput></FoodInput>
+        <FoodItems items={items} />
+        <ErrorMessage items={items} />
+      </Container>
+      <Container>
+        <p>all the above items are healthy for body.</p>
+      </Container>
+    </>
   );
 }
 
