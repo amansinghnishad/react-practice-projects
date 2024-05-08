@@ -1,12 +1,12 @@
 import styles from "./item.module.css";
 
-const Item = ({ items }) => {
+const Item = ({ items, bought }) => {
   const foodBuyButton = (items) => {
     alert(`You bought ${items}`);
   };
   return (
     <>
-      <li className="list-group-item">
+      <li className={`list-group-item ${bought && "active"}`}>
         {items}
         <button
           className={`${styles.button}  btn btn-info`}
