@@ -3,6 +3,7 @@ import AddTodo from "./components/todoAdd";
 import TodoItems from "./components/todoitems";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import WelcomeMessage from "./components/Welcome";
 import { useState } from "react";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
     <center className="todo-container">
       <AppName />
       <AddTodo onNewItems={handelNewItems}></AddTodo>
+      {todoItems.length === 0 && <WelcomeMessage></WelcomeMessage>}
       <TodoItems
         todoItems={todoItems}
         onDeleteClick={handelDeleteItems}
