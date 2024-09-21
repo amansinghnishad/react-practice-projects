@@ -1,11 +1,17 @@
+import React, { useState, useEffect } from "react";
+
 function DateAndTime() {
-  let date = new Date().toLocaleDateString();
-  let Time = new Date().toLocaleTimeString();
-  return (
-    <p>
-      This is the current time:{date}-{Time};
-    </p>
-  );
+  const [dateTime, setDateTime] = useState(new Date().toLocaleString());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDateTime(new Date().toLocaleString());
+    }, 1000);
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, []);
+
+  return <p>This is the current time: {dateTime}</p>;
 }
 
 export default DateAndTime;
